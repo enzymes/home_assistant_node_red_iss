@@ -1,0 +1,55 @@
+type: vertical-stack
+cards:
+  - type: map
+    entities:
+      - entity: device_tracker.home
+      - entity: binary_sensor.iss
+    hours_to_show: 1
+    title: ISS
+    aspect_ratio: '16:9'
+  - type: conditional
+    conditions:
+      - entity: sensor.iss_approach
+        state: No sightings soon
+    card:
+      type: entity
+      entity: sensor.iss_approach
+      icon: mdi:database-off-outline
+      name: Next visible in Melbourne
+  - type: conditional
+    conditions:
+      - entity: sensor.iss_approach
+        state_not: No sightings soon
+    card:
+      type: entity
+      entity: sensor.iss_next_overhead_date_time_compact
+      name: Next visible in Melbourne
+  - type: conditional
+    conditions:
+      - entity: sensor.iss_approach
+        state: No sightings soon
+    card:
+      type: entities
+      entities:
+        - entity: sensor.iss_rss_feed_updated
+        - entity: input_number.iss_set_minimum_elevation
+      show_header_toggle: false
+  - type: conditional
+    conditions:
+      - entity: sensor.iss_approach
+        state_not: No sightings soon
+    card:
+      type: entities
+      entities:
+        - entity: sensor.iss_approach
+        - entity: sensor.iss_elevation
+        - entity: sensor.iss_duration
+        - entity: sensor.iss_departure
+        - entity: sensor.iss_rss_feed_updated
+        - entity: input_number.iss_set_minimum_elevation
+      show_header_toggle: false
+  - type: entity
+    entity: sensor.iss_crew
+    name: People in space
+    icon: mdi:account-group
+    unit: people
