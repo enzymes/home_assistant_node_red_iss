@@ -1,0 +1,45 @@
+      iss_duration:
+        friendly_name: "Visible for"
+        value_template:  "{{ states('input_number.iss_duration') | int }}"
+        unit_of_measurement: 'minutes'
+        icon_template: mdi:timer-outline
+
+      iss_approach:
+        friendly_name: "Arriving from"
+        value_template:  "{{ states('input_text.iss_approach') }}"
+        icon_template: mdi:location-enter
+
+      iss_departure:
+        friendly_name: "Disappearing to"
+        value_template:  "{{ states('input_text.iss_departure') }}"
+        icon_template: mdi:location-exit
+
+      iss_elevation:
+        friendly_name: "Elevation above horizon"
+        value_template:  "{{ states('input_number.iss_elevation') | replace(' ', '') | int }}°"
+        icon_template: mdi:angle-acute
+
+      iss_next_overhead_date:
+        friendly_name: "Next date"
+        value_template: "{{ as_timestamp(states('input_datetime.iss_next_overhead_date_time')) | timestamp_custom('%a, %b %d')}}"
+        icon_template: mdi:calendar
+
+      iss_next_overhead_time:
+        friendly_name: "Next time"
+        value_template: "{{ as_timestamp(states('input_datetime.iss_next_overhead_date_time')) | timestamp_custom('%I:%M %p')}}"
+        icon_template: mdi:clock
+
+      iss_next_overhead_date_time:
+        friendly_name: "Next viewing"
+        value_template: "{{ as_timestamp(states('input_datetime.iss_next_overhead_date_time')) | timestamp_custom('%a, %b %d at %I:%M %p')}}"
+        icon_template: mdi:calendar-clock
+        
+      iss_next_overhead_date_time_compact:
+        friendly_name: "Next viewing"
+        value_template: "{{ as_timestamp(states('input_datetime.iss_next_overhead_date_time')) | timestamp_custom('%a %b %d, %H:%M')}}"
+        icon_template: mdi:calendar-clock
+
+      iss_rss_feed_updated:
+        friendly_name: "Last updated"
+        value_template: "{{ states('input_text.iss_rss_feed_updated') }}"
+        icon_template: mdi:clock
