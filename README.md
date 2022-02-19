@@ -1,4 +1,9 @@
-# home_asssistant_node_red_iss
+# Home Assistant announces when the International Space Station (ISS) is overhead
+
+<img src="https://github.com/enzymes/home_asssistant_node_red_iss/blob/main/iss_overhead_in_10_minutes_notification.jpg">
+
+<img src="https://github.com/enzymes/home_asssistant_node_red_iss/blob/main/iss_overhead_now_notification.jpg">
+
 Notifies you when the International Space Station (ISS) is going to be overhead next for your location
 
 Gives you a forecast of the next viewable arrival of the International Space Station (valid until January 2031)
@@ -21,32 +26,32 @@ On that page, get the RSS feed URL and enter that into the Feedparser node in th
 
 In my example, the RSS feed is https://spotthestation.nasa.gov/sightings/indexrss.cfm?country=Australia&region=Victoria&city=Melbourne
 
-REQUIREMENTS
+## REQUIREMENTS
 
 Needs "node-red-node-feedparser" added to the palette in Node RED. I _think_ you get prompted to add this if you don't have it installed on Node RED already.
 
+You will also need to add the YAML to your existing Home Assistant YAML files.
 
-ADDITIONS YOU CAN ADD
----------------------
+## ADDITIONS YOU CAN ADD
+
 
 Look in the comments for spots where you could
 add some additional checks to stop announcements when people are asleep or if who are home aren't interested in the ISS.
 
 
-MAKE ANNOUNCEMENTS ON SPEAKER?
+### MAKE ANNOUNCEMENTS ON SPEAKER?
 
-At our house, I have a sub-flow that checks to 
-see if announcements on the speaker are allowed.
+Listen to the example at https://github.com/enzymes/home_asssistant_node_red_iss/blob/main/iss_overhead_in_10_minutes_announcement.mp3
+
+At our house, I have a sub-flow that checks to see if announcements on the speaker are allowed.
 
 For example, if it is overnight, no announcements.
 
 If I've set a "do not disturb" mode, then again no announcements.
 
-ARE PEOPLE HOME WHO ARE INTERESTED IN THE ISS?
+### ARE PEOPLE HOME WHO ARE INTERESTED IN THE ISS?
 
-If only certain people are interested in the ISS
-announcements on the speaker, you could
-add a check here to see if they are home. 
+If only certain people are interested in the ISS announcements on the speaker, you could add a check here to see if they are home. 
 
 If they are home, there's an announcement.
 
