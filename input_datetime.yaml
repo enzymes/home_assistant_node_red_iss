@@ -1,0 +1,9 @@
+  iss_next_overhead:
+    name: 'ISS next overhead'
+    has_date: true
+    has_time: true
+
+  iss_next_overhead_date_time:
+    name: 'ISS next overhead'
+    has_date: true
+    has_time: true
