@@ -2,8 +2,6 @@
 
 <img src="https://github.com/enzymes/home_asssistant_node_red_iss/blob/main/iss_overhead_in_10_minutes_notification.jpg">
 
-<img src="https://github.com/enzymes/home_asssistant_node_red_iss/blob/main/iss_overhead_now_notification.jpg">
-
 Notifies you when the International Space Station (ISS) is going to be overhead next for your location
 
 Gives you a forecast of the next viewable arrival of the International Space Station (valid until January 2031)
