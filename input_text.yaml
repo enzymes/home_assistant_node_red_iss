@@ -1,0 +1,11 @@
+iss_approach:
+  name: ISS approaching from
+  initial: ''
+
+iss_departure:
+  name: ISS departing from
+  initial: ''
+
+iss_rss_feed_updated:
+  name: Last updated
+  initial: 'Recalculating'
