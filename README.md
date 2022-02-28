@@ -8,9 +8,7 @@
 
 How does it work? It checks an RSS feed for your location to check for upcoming arrival times for the ISS.
 
-There's an ISS card for Lovelace and you can
-set notifications on your mobile phone and
-Google / Nest smart speaker. Notifications are set  to be 10 minutes before the ISS is overhead and when it is overhead. 
+There's an ISS card for Lovelace and you can set notifications on your mobile phone and Google / Nest smart speaker. Notifications are set  to be 10 minutes before the ISS is overhead and when it is overhead. 
 
 The notification will tell you from what direction and angle above the horizon the ISS will arrive, how long it will be visible and it what direction and angle above the horizon it will disappear.
 
@@ -27,17 +25,17 @@ In my example, the RSS feed is https://spotthestation.nasa.gov/sightings/indexrs
 ## REQUIREMENTS
 
 Needs "node-red-node-feedparser" added to the palette in Node RED. I _think_ you get prompted to add this if you don't have it installed on Node RED already.
+https://flows.nodered.org/node/node-red-node-feedparser
 
-You will also need to add the YAML to your existing Home Assistant YAML files.
+You will also need to add the YAML to your existing Home Assistant YAML files. This are all listed in the yaml files that are part of this project.
 
 ## ADDITIONS YOU CAN ADD
 
 
-Look in the comments for spots where you could
-add some additional checks to stop announcements when people are asleep or if who are home aren't interested in the ISS.
+Look in the comments for spots where you could add some additional checks to stop announcements when people are asleep or if who are home aren't interested in the ISS.
 
 
-### MAKE ANNOUNCEMENTS ON SPEAKER?
+### MAKE ANNOUNCEMENTS ON SMART SPEAKER?
 
 Listen to the example at https://github.com/enzymes/home_asssistant_node_red_iss/blob/main/iss_overhead_in_10_minutes_announcement.mp3
 
