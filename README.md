@@ -24,8 +24,7 @@ In my example, the RSS feed is https://spotthestation.nasa.gov/sightings/indexrs
 
 ## REQUIREMENTS
 
-Needs "node-red-node-feedparser" added to the palette in Node RED. I _think_ you get prompted to add this if you don't have it installed on Node RED already.
-https://flows.nodered.org/node/node-red-node-feedparser
+Needs "node-red-node-feedparser" added to the palette in Node RED. You will need to add this if you don't have it installed on Node RED already. Details on this are at https://flows.nodered.org/node/node-red-node-feedparser
 
 You will also need to add the YAML to your existing Home Assistant YAML files. This are all listed in the yaml files that are part of this project.
 
