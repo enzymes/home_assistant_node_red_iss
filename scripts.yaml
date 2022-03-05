@@ -11,7 +11,7 @@ iss_overhead_in_10_minutes:
         leave {{ states.sensor.iss_departure.state }}. 
       data:
         chronometer: true
-        when: '{{ (as_timestamp(now()) + 36000) | round }}'
+        when: '{{ (as_timestamp(now()) + 600) | round }}'
         timeout: 600
         tag: iss
         ttl: 86400
