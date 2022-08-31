@@ -30,6 +30,8 @@ https://flows.nodered.org/node/node-red-node-feedparser
 
 https://flows.nodered.org/node/node-red-contrib-string 
 
+https://flows.nodered.org/node/node-red-contrib-moment
+
 You will also need to add the YAML to your existing Home Assistant YAML files. This are all listed in the yaml files that are part of this project.
 
 ## ADDITIONS YOU CAN ADD
